@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practica.css">
+    <title>practicar js</title>
+</head>
+<body>
+    <div class="contenedor-general">
+    <div id= "tarjetaDatosPrincipal"class="contenedor-tarjeta-principal" >
+        <div class="contenedor-tarjeta-imagen">
+            <img src="./imganes/rhamerfoto1.jpg">
+        </div>
+        <div class="contenedor-tarjeta-datos" >
+
+            <form class="form-group">
+            <label class= "form-label" for="">tipo de tela</label>
+            <input type="text" 
+            id="tomaDeDatos"
+            placeholder=" ">
+            <h4 class="mensajes-de-error" id="m1">escribi bien bobo</h4>
+            </form>
+
+            <form class="form-group">
+            <label class="form-label" for="">cantidad de metros</label>
+            <input type="number"
+            id="tomaDeMetros"
+            placeholder=" ">
+            <h4 class="mensajes-de-error" id="m2">escribi bien bobo</h4>
+            </form>
+
+            <form class="form-group">
+                <select name="colores" id="tomaDeColor">
+                    <option value="">color</option>
+                    <option value="rojo">rojo</option>
+                    <option value="azul">azul</option>
+                    <option value="verde">verde</option>
+                    <option value="amarillo">amarillo</option>
+                    <option value="negro">negro</option>
+                </select>
+                <h4 class="mensajes-de-error" id="m3">escribi bien bobo</h4>
+            </form>
+            
+        </div>
+        
+        <div class="contenedor-tarjeta-boton">
+            <button id="boton">enviar corte</button>
+            
+        </div>
+
+
+    </div>
+    <div class="price-table-container" id="price-table-container">
+        <table>
+            <tr class="primera fila"><td>tipo de tela</td><td>precio por metro</td></tr>
+            <tr class="fila2"><td>flow</td><td>1000</td></tr>
+            <tr class="fila3"><td>niza</td><td>2000</td></tr>
+            <tr class="fila4"><td>sann</td><td>3000</td></tr>
+            <tr class="fila5"><td>venecia</td><td>4000</td></tr>
+            <tr class="fila6"><td>talampaya</td><td>5000</td></tr>
+            <tr class="fila7"><td>angus</td><td>6000</td></tr>
+            <tr class="fila8"><td>zoom</td><td>7000</td></tr>
+            <tr class="fila9"><td>gales</td><td>8000</td></tr>
+            <tr class="fila10"><td>fidel</td><td>9000</td></tr>
+        </table>
+    </div>
+    <div class="factura-container" id="tarjetaConPedidoFinal">
+        <div class="contenedor-titulo">
+            <h2>factura final</h2>
+        </div>   
+        <div class="contenedor-pedidos" id="contenedor-pedidos">
+        </div> 
+        <div class="contenedor-delboton-pedido">
+            <p id="total-para-mostrar"></p>
+            <button id="boton-factura">finalizar pedido</button>
+            <button id="boton-cancelar">recuperar pedido anterior</button>
+        </div>
+    </div>
+    </div>
+    <script src="practica.js"></script>
+</body>
+</html>

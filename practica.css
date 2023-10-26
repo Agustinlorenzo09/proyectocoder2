@@ -1,0 +1,211 @@
+body{
+    background-image:url(./imganes/Wave\ .svg);
+    background-size: cover;
+}
+.contenedor-general{
+margin: auto;
+width: 1200px;
+height: 700px;   
+display: grid;
+grid-template-columns: 400px 400px 400px ;
+grid-template-rows: 700px;
+grid-gap:20px;
+align-items: center;
+
+}
+.contenedor-tarjeta-principal{
+    display: grid;
+    height: 500px;
+    width: 400px;
+    grid-template-columns: 100%;
+    grid-template-rows: 70px 330px 70px;
+    border-radius: 4%;
+    margin-top: 5px;
+    background-color: #2E97A7;
+
+    
+}
+
+
+.contenedor-tarjeta-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.form-group{
+    position: relative;
+    margin-top:13px ;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.form-group > input{
+    height: 20px;
+    width: 300px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: #2E97A7;
+    border-bottom: 0.5px solid black;
+    
+}
+
+.form-group > label{
+   
+    font-size: 21px;
+    margin-left: 3px;
+    border-bottom: 0;
+}
+#tomaDeColor{
+    height: 30px;
+    width: 300px;
+    outline: none;
+    border: none;
+    background-color: #2E97A7;
+    border-bottom: 0.5px solid black;
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+#boton:hover{
+    background-color: #00cc66;
+    transition: ease 1s;
+}
+
+.contenedor-tarjeta-boton >button{
+    height: 40px;
+    width: 200px;
+    outline: none;
+    border: transparent;
+    border-radius: 10px;
+
+}
+.contenedor-tarjeta-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.contenedor-tarjeta-imagen >img{
+height: 70px;
+width: 200px;
+border-radius: 10px;
+}
+.contenedor-tarjeta-imagen{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+.price-table-container{
+    display:flex ;
+    height: 500px;
+    width: 400px;
+    background-color: #2E97A7;
+    border-radius: 4%;
+    justify-content: center; 
+    align-items: center;   
+    margin-top: 5px;  
+    
+}
+.price-table-container > table > tbody{
+    height: 500px;
+    width: 400px;
+    
+;
+}
+.price-table-container > table >tbody >tr {
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows:50px;
+    align-items: center;
+    justify-items: center;
+    font-size: 20px;
+       
+}
+.factura-container{
+    height: 500px;
+    width: 400px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='400' height='500' preserveAspectRatio='none' viewBox='0 0 400 500'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1031%26quot%3b)' fill='none'%3e%3crect width='400' height='500' x='0' y='0' fill='rgba(241%2c 230%2c 230%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c259 C 40%2c237 120%2c148.6 200%2c149 C 280%2c149.4 360%2c238.6 400%2c261L400 500L0 500z' fill='rgba(46%2c 151%2c 167%2c 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1031'%3e%3crect width='400' height='500' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    border-radius: 4%;
+    justify-content: center; 
+    align-items: center;   
+    margin-top: 5px; 
+  }   
+
+.mensajes-de-error{
+    display: none;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+
+}
+
+.factura-container{
+    display: grid;
+    height: 500px;
+    width: 400px;
+    grid-template-rows: 50px 400px 50px;
+    grid-template-columns: 400px;
+}
+.contenedor-titulo{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-delboton-pedido{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+#boton-factura{
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: transparent;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: none;
+}
+.contenedor-pedidos{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    align-items: center;
+
+}
+#boton-cancelar{
+    height: 40px;
+    width: 60px;
+    outline: none;
+    border: transparent;
+    border-radius: 10px;
+    margin-right: 20px;
+    display: none;
+}
+
+/* key frames*/
+
+@keyframes 
+scale-up-bottom{
+    0%{transform:scale(.5);transform-origin:center bottom}
+    100%{transform:scale(1);transform-origin:center bottom}
+}
+@keyframes
+vibrate{0%{transform:translate(0)}20%{transform:translate(-2px,2px)}40%{transform:translate(-2px,-2px)}60%{transform:translate(2px,2px)}80%{transform:translate(2px,-2px)}100%{transform:translate(0)}};
+
+
+
+

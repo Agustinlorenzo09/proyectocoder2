@@ -106,11 +106,7 @@ class carrito{
   }
 }
 
-const mostrarlorecuperado = () =>{
-  for (const producto of carritoGeneral) {
-    console.log(producto.tela,producto.metros,producto.color,producto.precio)
-  }
-}
+
 const vibracionDeError = () =>{
   tarjeta1.style.animation = "vibrate 1.5s linear both"
 }
@@ -120,7 +116,7 @@ const vibracionDeError = () =>{
 esconderErrores()
   
   boton.addEventListener(`click`, (e) =>{ 
-    e = ((boton.style.animationName = "scale-up-bottom") + (boton.style.animationDuration = "0.4s"))
+    e=((boton.style.animationName = "scale-up-bottom") + (boton.style.animationDuration = "0.4s"))
     
     
 
@@ -129,8 +125,8 @@ esconderErrores()
     mostrarDato = (`tela : ${dato.value}  metros : ${metro.value} color : ${color.value}`)
 
       if((dato.value == "") || (busquedaTela == false) ){
+
       errores(document.getElementById("m1"))
-      
       error = true
       document.getElementById(`tomaDeDatos`).value=""
       
@@ -162,15 +158,12 @@ esconderErrores()
         mostrarDato = (`tela: ${dato.value},metros: ${metro.value},color: ${color.value},precio: ${valor}`)
         const recuperarlocal = JSON.parse(localStorage.getItem("productos"))
         let mostrarPedidoaPedido = document.createElement('p');
-        mostrarPedidoaPedido.innerText = (mostrarDato)
-        mostrarPedidoaPedido.className ="pedidoapedido"
-        mostrarFacturaFinal.append(mostrarPedidoaPedido)
+        recuperarlocal.forEach((unproducto) => {
+          mostrarPedidoaPedido.innerText = (`tela: ${unproducto.tela},metros: ${unproducto.metros},color: ${unproducto.color},precio: ${unproducto.precio}`)
+          mostrarPedidoaPedido.className ="pedidoapedido"
+          mostrarFacturaFinal.append(mostrarPedidoaPedido)  
+        });
         mostrarfactura.innerText = (`total: ${mostrafacturafinal2}`)
-        console.log(carritoGeneral.length);
-        console.log(mostrarDato);
-        console.log(...facturatotal);
-        console.log(mostrafacturafinal2);
-        console.log(recuperarlocal)
         borrarTodo()
         esconderErrores()
         if(carritoGeneral.length == 1){
